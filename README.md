@@ -1,3 +1,5 @@
+<div style="text-align: center"><img src="https://cdn.ykzird.cloud/secrets-scan.svg" alt="secrets-scan" /> </div>
+
 # @ykzird/secrets-scan
 
 Scan files and directories for leaked secrets — API keys, tokens, connection strings, private keys, and more. Works as a CLI or as a Node.js library. Exits with code `1` when findings are present, making it easy to integrate into CI pipelines.
