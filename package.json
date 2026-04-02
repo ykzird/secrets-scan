@@ -1,0 +1,47 @@
+{
+  "name": "@ykzird/secrets-scan",
+  "version": "1.0.1",
+  "description": "CLI tool and library for scanning files and directories for leaked secrets and credentials",
+  "license": "MIT",
+  "author": "ykzird",
+  "keywords": ["secrets", "security", "cli", "scanner", "credentials", "api-keys", "devops", "ci"],
+  "engines": { "node": ">=18" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ykzird/secrets-scan"
+  },
+  "main": "dist/lib.js",
+  "types": "dist/lib.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/lib.d.ts",
+      "require": "./dist/lib.js",
+      "default": "./dist/lib.js"
+    }
+  },
+  "bin": {
+    "secrets-scan": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "dev": "ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0",
+    "vitest": "^3.0.0"
+  }
+}
