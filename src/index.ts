@@ -17,7 +17,7 @@ const program = createCommand();
 program
   .name("secrets-scan")
   .description("Scan files and directories for leaked secrets and credentials")
-  .version("1.0.0")
+  .version("1.0.2")
   .argument("<path>", "file or directory to scan")
   .option("--exclude <pattern...>", "additional path patterns to exclude (stacks with defaults)")
   .option("--no-default-excludes", "disable the default exclude list (node_modules, .git, dist, ...)")
